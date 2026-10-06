@@ -3,7 +3,7 @@ Curso de introducción al uso de Python y a herramientas de IA para automatizar 
 
 El material del curso se irá cargando en este repositorio semana a semana.
 
-El curso consiste en 8 encuentros:
+El curso consiste en 8 encuentros (de 14:00 a 17:00 horas):
 
 - Martes 13 de octubre
 - Lunes 19 de octubre
