@@ -5,11 +5,11 @@ El material del curso se irá cargando en este repositorio semana a semana.
 
 El curso consiste en 8 encuentros (de 14:00 a 17:00 horas):
 
-- Martes 13 de octubre
-- Lunes 19 de octubre
-- Lunes 26 de octubre
-- Lunes 2 de noviembre
-- Lunes 9 de noviembre
-- Lunes 16 de noviembre
-- Martes 24 de noviembre
-- Lunes 30 de noviembre
+- Clase 1: Martes 13 de octubre
+- Clase 2: Lunes 19 de octubre
+- Clase 3: Lunes 26 de octubre
+- Clase 4: Lunes 2 de noviembre
+- Clase 5: Lunes 9 de noviembre
+- Clase 6: Lunes 16 de noviembre
+- Clase 7: Martes 24 de noviembre
+- Clase 8: Lunes 30 de noviembre
