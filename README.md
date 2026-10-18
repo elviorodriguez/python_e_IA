@@ -13,3 +13,6 @@ El curso consiste en 8 encuentros (de 14:00 a 17:00 horas):
 - Clase 6: Lunes 16 de noviembre
 - Clase 7: Martes 24 de noviembre
 - Clase 8: Lunes 30 de noviembre
+
+# ZIPs
+Para descargar más fácilmente el material, cada carpeta también está disponisble como archivo ```.zip``` en el directorio ```ZIPs```.
