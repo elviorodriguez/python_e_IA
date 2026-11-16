@@ -1,0 +1,80 @@
+# -*- coding: utf-8 -*-
+
+import matplotlib.pyplot as plt
+
+###############################################################################
+# --------------------------------- INPUT ----------------------------------- #
+###############################################################################
+
+# Valores de X
+dias = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14]
+
+# ----------------- Crecimiento de cepa con gen wild type (WT) ----------------
+
+# Valores de Y1 (replicas sin inducir de la cepa que expresa gen WT: control)
+parasitos_genWT_ctrl_repA = [1.0, 2.4, 6.0, 11.2, 17.2, 23.4, 40.8, 53.0, 63.7, 64.0, 78.4, 88.0, 90.4]
+parasitos_genWT_ctrl_repB = [1.0, 2.2, 5.2, 9.2, 15.4, 24.0, 35.1, 53.5, 61.6, 64.8, 64.0, 88.0, 88.0]
+parasitos_genWT_ctrl_repC = [1.0, 2.6, 5.4, 10.4, 15.0, 24.2, 34.5, 50.5, 59.5, 64.8, 68.8, 77.6, 86.4]
+
+# Valores de Y2 (réplicas sobreexpresante del gen WT)
+parasitos_genWT_sobreexp_repA = [1.0, 1.4, 2.2, 4.2, 5.2, 6.6, 9.0, 12.9, 20.1, 27.0, 40.0, 56.8, 62.4]
+parasitos_genWT_sobreexp_repB = [1.0, 1.4, 2.4, 4.2, 4.6, 7.6, 8.4, 13.8, 20.4, 27.9, 41.0, 60.8, 62.4]
+parasitos_genWT_sobreexp_repC = [1.0, 1.4, 2.6, 4.0, 5.2, 7.6, 9.3, 15.0, 20.1, 27.3, 38.5, 56.0, 64.8]
+
+# ----------------- Crecimiento de cepa con gen mutante (MUT) -----------------
+
+# Valores de Y3 (replicas sin inducir de la cepa que expresa gen MUT: control)
+parasitos_genMUT_ctrl_repA = [1.0, 2.6, 5.0, 8.4, 10.4, 18.2, 33.3, 50.5, 61.6, 74.4, 87.2, 80.8, 80.0]
+parasitos_genMUT_ctrl_repB = [1.0, 2.6, 5.0, 8.4, 10.4, 18.2, 33.3, 50.5, 61.6, 74.4, 87.2, 80.8, 80.0]
+parasitos_genMUT_ctrl_repC = [1.0, 2.4, 6.2, 9.6, 13.0, 17.6, 32.4, 49.0, 60.2, 72.0, 80.8, 70.4, 81.6]
+
+# Valores de Y4 (réplicas sobreexpresante del gen MUT)
+parasitos_genMUT_sobreexp_repA = [1.0, 1.2, 1.6, 3.0, 3.2, 3.6, 4.8, 5.4, 6.9, 9.3, 12.0, 16.8, 30.8]
+parasitos_genMUT_sobreexp_repB = [1.0, 1.4, 2.0, 3.0, 3.6, 4.0, 4.5, 5.4, 6.6, 9.0, 12.3, 16.5, 28.0]
+parasitos_genMUT_sobreexp_repC = [1.0, 1.4, 2.0, 2.6, 3.4, 3.2, 4.8, 5.4, 6.6, 9.0, 11.1, 15.6, 27.2]
+
+###############################################################################
+# ------------------------------- CALCULOS ---------------------------------- #
+###############################################################################
+# Calculos acá
+
+# Promedio en cada índice
+parasitos_genWT_ctrl_promedio = [(a+b+c)/3 for a,b,c in zip(parasitos_genWT_ctrl_repA, parasitos_genWT_ctrl_repB, parasitos_genWT_ctrl_repC)]
+parasitos_genWT_sobreexp_promedio = [(a+b+c)/3 for a,b,c in zip(parasitos_genWT_sobreexp_repA, parasitos_genWT_sobreexp_repB, parasitos_genWT_sobreexp_repC)]
+parasitos_genMUT_ctrl_promedio = [(a+b+c)/3 for a,b,c in zip(parasitos_genMUT_ctrl_repA, parasitos_genMUT_ctrl_repB, parasitos_genMUT_ctrl_repC)]
+parasitos_genMUT_sobreexp_promedio = [(a+b+c)/3 for a,b,c in zip(parasitos_genMUT_sobreexp_repA, parasitos_genMUT_sobreexp_repB, parasitos_genMUT_sobreexp_repC)]
+
+
+###############################################################################
+# ------------------------------- GRÁFICOS ---------------------------------- #
+###############################################################################
+# Gráficos acá
+
+fig, (sub1, sub2) = plt.subplots(1,2)
+
+# Título, etiques y leyenda compartidas
+fig.suptitle('Cepa con gen WT vs MUT')
+fig.supylabel("Parásitos (mill/ml)")
+fig.supxlabel("Tiempo (d)")
+
+# Subplot 1: función lineal
+sub1.plot(dias, parasitos_genWT_ctrl_promedio, 'g-', label='WT control')
+sub1.plot(dias, parasitos_genWT_ctrl_repA, 'go')
+sub1.plot(dias, parasitos_genWT_ctrl_repB, 'go')
+sub1.plot(dias, parasitos_genWT_ctrl_repC, 'go')
+sub1.plot(dias, parasitos_genWT_sobreexp_promedio, 'r-', label='WT sobreexpresante')
+sub1.plot(dias, parasitos_genWT_sobreexp_repA, 'ro')
+sub1.plot(dias, parasitos_genWT_sobreexp_repB, 'ro')
+sub1.plot(dias, parasitos_genWT_sobreexp_repC, 'ro')
+sub1.legend()
+
+# Subplot 2: función lineal
+sub2.plot(dias, parasitos_genMUT_ctrl_promedio, 'g-', label='MUT control')
+sub2.plot(dias, parasitos_genMUT_ctrl_repA, 'go')
+sub2.plot(dias, parasitos_genMUT_ctrl_repB, 'go')
+sub2.plot(dias, parasitos_genMUT_ctrl_repC, 'go')
+sub2.plot(dias, parasitos_genMUT_sobreexp_promedio, 'r-', label='MUT sobreexpresante')
+sub2.plot(dias, parasitos_genMUT_sobreexp_repA, 'ro')
+sub2.plot(dias, parasitos_genMUT_sobreexp_repB, 'ro')
+sub2.plot(dias, parasitos_genMUT_sobreexp_repC, 'ro')
+sub2.legend()
