@@ -1,0 +1,25 @@
+Blank (promedio abs550): 0.0917
+Curva: abs550_corr = 0.000471527 * conc + 0.00509668 (R2 = 0.9041)
+
+Concentración promedio por etiqueta:
+BDF2wt_0hs_A	75.44
+BDF2wt_0hs_B	88.87
+BDF2wt_0hs_C	107.25
+BDF2wt_0hs_D	80.38
+BDF2wt_24hs_A	21.71
+BDF2wt_24hs_B	21.71
+BDF2wt_24hs_C	26.66
+BDF2wt_24hs_D	46.45
+BDF2wt_6hs_A	74.73
+BDF2wt_6hs_B	76.14
+BDF2wt_6hs_C	79.68
+BDF2wt_6hs_D	90.99
+BDF5ko_A	106.54
+BDF5ko_B	115.02
+BDF5ko_C	18.17
+BDF5ko_D	23.12
+Dm28c_A	18.17
+Dm28c_B	28.07
+Dm28c_C	36.55
+Dm28c_D	36.55
+TURBO_BDF2	93.11

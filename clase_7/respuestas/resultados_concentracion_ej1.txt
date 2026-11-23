@@ -1,0 +1,16 @@
+Blank (promedio abs550): 0.1277
+Curva: abs550_corr = 0.00102614 * conc + 0.0374485 (R2 = 0.9937)
+
+Concentración promedio por etiqueta:
+BD2_A	305.24
+BD2_B	308.49
+BD2_C	328.95
+BD2_D	325.71
+GFP_A	419.26
+GFP_B	429.98
+GFP_C	420.88
+GFP_D	405.29
+pLE_A	376.38
+pLE_B	344.22
+pLE_C	386.78
+pLE_D	384.18
